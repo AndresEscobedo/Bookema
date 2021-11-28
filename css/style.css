@@ -1,0 +1,134 @@
+body {
+  font-family: "Poppins", sans-serif !important;
+
+  background: #091548 !important;
+
+  color: white !important;
+}
+
+p {
+  opacity: 0.5;
+}
+
+.banner {
+  background-color: rgb(27, 42, 119);
+
+  background-image: url("https://media.discordapp.net/attachments/774868403135053845/902418711108026368/movies1.png?width=1611&height=906");
+  background-position: top;
+
+  background-repeat: no-repeat;
+}
+
+.info-banner {
+  color: white;
+}
+.info-banner > p {
+  opacity: 0.5;
+}
+
+.info-banner > h1 {
+  font-weight: 600;
+  font-size: 4em;
+}
+
+.login-button {
+  background-color: #1a2e7c !important;
+
+  color: white !important;
+
+  border: none !important;
+
+  border-radius: 100px !important;
+}
+
+.login-button2 {
+  background-color: #3a9bf4 !important;
+
+  color: white !important;
+
+  border: none !important;
+
+  border-radius: 100px !important;
+}
+
+.navbar-dark {
+  background: rgb(27, 42, 119) !important;
+}
+
+.promo {
+  height: 1000px;
+
+  background-image: url("https://cdn.discordapp.com/attachments/774868403135053845/902422242808446986/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.info {
+  margin-top: 200px;
+}
+
+.txt-info > p {
+  opacity: 0.5;
+}
+
+.txt-info > h2 {
+  font-weight: 600;
+  font-size: 3em;
+}
+
+.txt-info > h3 {
+  font-weight: 600;
+  font-size: 2.5em;
+}
+
+.info-sec {
+  margin-top: 200px !important;
+}
+
+footer {
+  background: #091037 !important;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.sm-icon {
+  color: white !important;
+  font-size: 1.5em;
+}
+
+input.footerform {
+  border: none !important;
+
+  border-bottom: solid 2px white !important;
+
+  background: none !important;
+
+  border-radius: 0 !important;
+
+  outline: 0 !important;
+}
+
+textarea.footerform {
+  border: none !important;
+
+  border-bottom: solid 2px white !important;
+
+  background: none !important;
+
+  border-radius: 0 !important;
+}
+
+input:focus {
+  border-bottom: solid 3px #3a9bf4 !important;
+}
+
+textarea:focus {
+  border-bottom: solid 3px #3a9bf4 !important;
+}
