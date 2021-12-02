@@ -1,6 +1,6 @@
 
- import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
-  import { getDatabase } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+  import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
   import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword  } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js";
 
 
@@ -32,21 +32,47 @@
   var signup_password = document.querySelector("#signup-password");
   var signup_form = document.querySelector("#signup-form");
 
+  var name = signup_name.value
+  var email = signup_email.value
+
+
+  function openFYP() {
+      setTimeout(() => {
+
+        window.open("../pages/fyp.html","_self")
+       
+      }, 200);
+  }
+
+
 
 
   signup_form.addEventListener('submit', e =>{
       e.preventDefault();
 
+
 createUserWithEmailAndPassword(auth, signup_email.value, signup_password.value)
   .then((userCredential) => {
 
+    name = signup_name.value
+    email = signup_email.value
+    
 
     // Signed in
     const user = userCredential.user;
 
-    console.log("Usuario Creado")
+    set(ref(database, 'users/' + user.uid), {
 
-    window.open("../pages/fyp.html","_self")
+      name: name,
+      email: email
+
+ 
+      });
+
+    console.log(name)
+    console.log(email)
+
+    openFYP()
     // ...
   })
   .catch((error) => {
