@@ -62,9 +62,71 @@
             <div class="support-txt mt-3">
               <p class="" style="opacity: 1;">¿Tienes problemas para crear tu cuenta? Contacta a <a href="">Nuestro Equipo de Soporte</a></p>
             </div>
+
+            
+             
             
           </form>
+
+          <form id="preferences-form" class="form-box">
+            <h4 class="mb-5 titles">Te damos la bienvenida a Bookema</h4>
+            <p>Tus respuestas a las próximas preguntas nos ayudarán a encontrar los libros indicados para ti</p>
+            <div>
+              <div class="form-group">
+                <label class="form-label" for="exampleInputEmail1">Edad</label>
+                <input type="text" class="login-input form-control" id="signup-age"  placeholder="Escribe tu Edad">
+              </div>
+              <div class="form-group">
+                <label class="form-label pt-3" for="exampleInputPassword1">¿Qué generos te gustan?</label> <br> <!-- no se si en js se puedan limitar los checks-->
+                <div class="form-check form-check-inline">
+                    <input class="btn-check" type="checkbox" id="Cat1" value="Drama" />
+                    <label class="btn btn-primary" for="Cat1">Misterio</label>
+                  </div>
+                  
+                  <div class="form-check form-check-inline">
+                    <input class="btn-check" type="checkbox" id="Cat2" value="Terror" />
+                    <label class="btn btn-primary" for="Cat2">Terror</label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input class="btn-check" type="checkbox" id="Cat3" value="Sci-fi" />
+                    <label class="btn btn-primary" for="Cat3">Ciencia Ficción</label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input class="btn-check" type="checkbox" id="Cat4" value="Romance" />
+                    <label class="btn btn-primary" for="Cat4">Romance</label>
+                  </div>
+                  
+                  <div class="form-check form-check-inline">
+                    <input class="btn-check" type="checkbox" id="Cat6" value="Policiaco" />
+                    <label class="btn btn-primary" for="Cat6">Policiaco</label>
+                  </div>
+
+                  <div id="select">
+                    <p class="pt-3">Seleccionados: </p>
+                  </div>
+                  
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="exampleInputEmail1">¿Que libros te gusntan?</label>
+              <div id="bookCard" class="col-12 d-flex">
+                
+              </div>
+            </div>
+              
+              <input type="submit" id="preferences-button" class="loginbtn btn btn-primary" value="Crear Cuenta">
+            </div>
+
           
+       
+             
+            
+          </form>
+
+
+      
         </div>
       </div>
     </div> 

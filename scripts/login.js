@@ -4,6 +4,7 @@
  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword  } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js";
 
 
+
  const firebaseConfig = {
    apiKey: "AIzaSyAhJiwFArdnCVyoOLdyZ-XCWy2R3QhBPJo",
    authDomain: "bookema-a21a4.firebaseapp.com",
@@ -17,6 +18,7 @@
  const app = initializeApp(firebaseConfig);
  const database = getDatabase(app);
  const auth = getAuth();
+ 
 
  /* LogIn de Usuarios */
 
