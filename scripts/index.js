@@ -99,6 +99,8 @@ window.onload = function logedIn() {
   
             deleteBooks.style.display = "block"
             addBooks.style.display = "none"
+
+            console.log("hhh")
   
           });
   
