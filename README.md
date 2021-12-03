@@ -9,7 +9,7 @@
   <p align="center">
     Encontrando historias para ti.
     <br />
-    <a href="https://github.com/AndresEscobedo/Bookema"><strong>Proyecto</strong></a>
+    <a href="https://andresescobedo.github.io/Bookema/"><strong>Proyecto</strong></a>
   </p>
 </p>
 

@@ -91,6 +91,25 @@ window.onload = function logedIn() {
           
           `
 
+          const nav_delete = document.querySelector("#nav-delete")
+        const nav_add = document.querySelector("#nav-add")
+
+          nav_delete.addEventListener("click", e =>{
+            e.preventDefault()
+  
+            deleteBooks.style.display = "block"
+            addBooks.style.display = "none"
+  
+          });
+  
+          nav_add.addEventListener("click", e =>{
+            e.preventDefault()
+  
+            deleteBooks.style.display = "none"
+            addBooks.style.display = "block"
+  
+          });
+
 
         }else {
 
@@ -99,24 +118,9 @@ window.onload = function logedIn() {
 
         }
 
-        const nav_delete = document.querySelector("#nav-delete")
-        const nav_add = document.querySelector("#nav-add")
+        
 
-        nav_delete.addEventListener("click", e =>{
-          e.preventDefault()
-
-          deleteBooks.style.display = "block"
-          addBooks.style.display = "none"
-
-        })
-
-        nav_add.addEventListener("click", e =>{
-          e.preventDefault()
-
-          deleteBooks.style.display = "none"
-          addBooks.style.display = "block"
-
-        })
+        
 
         const save = document.querySelector("#save-btn")
 
