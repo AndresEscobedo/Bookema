@@ -229,6 +229,13 @@ input[type=number]:focus,
   width: 400px !important;
 }
 
+.mainBook {
+  height: 500px;
+  background-color: tomato;
+  border-radius: 20px;
+  margin-bottom: 100px;
+}
+
 
 
 @media (min-width: 320px) and (max-width: 480px) {
