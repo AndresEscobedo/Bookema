@@ -274,6 +274,7 @@
 
     set(ref(database, 'users/' + user.uid), {
 
+      tipo: "Usuario",
       name: name,
       email: email,
       edad:  signup_age,
