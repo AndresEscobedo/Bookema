@@ -125,7 +125,7 @@
 
         window.open("../pages/fyp.html","_self")
        
-      }, 200);
+      }, 1000);
   }
 
 
