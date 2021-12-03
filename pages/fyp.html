@@ -51,7 +51,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav mx-auto">
+          <ul id="menu" class="navbar-nav mx-auto">
             <li class="nav-item">
               <a class="nav-link active" href="#">Recomendaciones</a>
             </li>
@@ -70,86 +70,199 @@
         </div>
       </div>
     </nav>
-    
-    <div class="container ">
-      <h1 class="p-5">
-        Recomendado para ti
-    </h1>
-      <div class="row justify-content-center ">
-        <div class="col-12 col-md-8 mainBook">
-          <h4>Titulo del libro</h4>
-          <p>Autor del libro</p>
+
+    <section id="userSec">
+
+      <div class="container ">
+        <h1 class="p-5">
+          Recomendado para ti
+      </h1>
+        <div class="row justify-content-center ">
+          <div id="mainBook" class="col-12 col-md-8 mainBook align-text-bottom">
+            
+          </div>
         </div>
       </div>
-    </div>
-    <div id="randGenere" class="container pt-3">
-      <h3>
-        Porque te gusta el:
-      </h3>
-        <div class="container pt-2" id="cat-recom">
-               
-                
-                  
+      <div id="randGenere" class="container pt-3">
+        <h3>
+          Porque te gusta el:
+        </h3>
+        
+      </div>
+      <div class="container pt-3" id="film-recom">
+        
+        <div class="container pt-3" >
+          <div id="gustos" class="row">
+           
+            
+            
+          </div>
         </div>
-    </div>
-    <div class="container pt-3" id="film-recom">
       
+      </div>
+  
+      <div id="randGenere2" class="container pt-3">
+        
+          
+      </div>
+  
       <div class="container pt-3" >
-        <div id="gustos" class="row">
+        <div id="otherGenere" class="row">
          
           
           
         </div>
       </div>
-    
-    </div>
-    <div class="container pt-3" id="film-recom">
-      <!-- JS para la primer pelicula en la recom con 3 libros relacionados
-      <h2>
-        Por que viste ${film2.name}
-      </h2>
-      <div class="container pt-3" >
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card card-body mt-3 border-primary">
-              <img class="img-fluid" src="${book1.img}" />
-              <div class="text-center">
-                <h4 id="titleBook">
-                  ${book1.name}
-                </h4>
-                <p>${book1.author}</p>
-                <p>${book1.cat}</p>
+  
+      <div class="container pt-3" id="film-recom">
+        
+        
+      
+      </div>
+      <div class="container pt-3" id="film-recom">
+        <!-- JS para la primer pelicula en la recom con 3 libros relacionados
+        <h2>
+          Por que viste ${film2.name}
+        </h2>
+        <div class="container pt-3" >
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card card-body mt-3 border-primary">
+                <img class="img-fluid" src="${book1.img}" />
+                <div class="text-center">
+                  <h4 id="titleBook">
+                    ${book1.name}
+                  </h4>
+                  <p>${book1.author}</p>
+                  <p>${book1.cat}</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-body mt-3 border-primary">
-              <img class="img-fluid" src="${book2.img}" />
-              <div class="text-center">
-                <h4 id="titleBook">
-                  ${book2.name}
-                </h4>
-                <p>${book2.author}</p>
-                <p>${book2.cat}</p>
+            <div class="col-md-4">
+              <div class="card card-body mt-3 border-primary">
+                <img class="img-fluid" src="${book2.img}" />
+                <div class="text-center">
+                  <h4 id="titleBook">
+                    ${book2.name}
+                  </h4>
+                  <p>${book2.author}</p>
+                  <p>${book2.cat}</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-body mt-3 border-primary">
-              <img class="img-fluid" src="${book3.img}" />
-              <div class="text-center">
-                <h4 id="titleProduct">
-                  ${book3.name}
-                </h4>
-                <p>${book3.author}</p>
-                <p>${book3.cat}</p>
+            <div class="col-md-4">
+              <div class="card card-body mt-3 border-primary">
+                <img class="img-fluid" src="${book3.img}" />
+                <div class="text-center">
+                  <h4 id="titleProduct">
+                    ${book3.name}
+                  </h4>
+                  <p>${book3.author}</p>
+                  <p>${book3.cat}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      -->
       </div>
-    -->
-    </div>
+
+
+    </section>
+
+    <section id="adminSec">
+      <div class="container">
+        <div id="welcome" class="row justify-content-center">
+
+          
+          
+
+        </div>
+      </div>
+      <div id="delete" class="container">
+        <h4 class="p-3 mt-3">Libros de: <b>Misterio</b> </h4>
+        <div id="misterioCards" class="row justify-content-center">
+
+        </div>
+        <h4 class="p-3 mt-3">Libros de: <b>Scifi</b></h4>
+        <div id="scifiCards" class="row justify-content-center">
+
+        </div>
+        <h4 class="p-3 mt-3">Libros de: <b>Policiaco</b></h4>
+        <div id="policiacoCards" class="row justify-content-center">
+
+        </div>
+        <h4 class="p-3 mt-3">Libros de: <b>Terror</b></h4>
+        <div id="terrorCards" class="row justify-content-center">
+
+        </div>
+
+        <h4 class="p-3 mt-3">Libros de: <b>Romance</b></h4>
+        <div id="romanticoCards" class="row justify-content-center">
+
+        </div>
+      </div>
+
+      <div id="add" class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-4">
+            <div class="card bg-light">
+              <div class="card-body">
+                <h5 style="color: black;" class="card-title" id="card-title">
+                  Agreguemos un libro nuevo!
+                </h5>
+  
+                <form id="contenedor">
+                  <div class="p-3 form-group">
+                    <label style="color: black;" for="exampleFormControlSelect1">Genero</label>
+                    <select class="form-control" id="add-genere">
+                      <option>misterio</option>
+                      <option>terror</option>
+                      <option>policiaco</option>
+                      <option>Scifi</option>
+                      <option>Romantico</option>
+                    </select>
+                  </div>
+                  <div class=" p-3 form-group">
+                    <input
+                      type="text"
+                      id="add-titulo"
+                      class="form-control"
+                      placeholder="Titulo del libro"
+                      autofocus
+                    />
+                  </div>
+                  <div class="p-3 form-group">
+                    <input
+                      type="text"
+                      id="add-autor"
+                      class="form-control"
+                      placeholder="Autor del libro"
+                      autofocus
+                    />
+                  </div>
+                  <div class="p-3 form-group">
+                    <input
+                      type="text"
+                      id="add-image"
+                      class="form-control"
+                      placeholder="Link de la imagen"
+                      autofocus
+                    />
+                  </div>
+                  <button type="button" class="btn btn-primary" id="save-btn">
+                    Añadir Libro
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+    
     
     <footer>
         <div class="container footer-content p-5">

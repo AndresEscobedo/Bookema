@@ -113,6 +113,8 @@ input.footerform {
   border-radius: 0 !important;
 
   outline: 0 !important;
+
+  color: white !important;
 }
 
 textarea.footerform {
@@ -231,9 +233,18 @@ input[type=number]:focus,
 
 .mainBook {
   height: 500px;
-  background-color: tomato;
   border-radius: 20px;
   margin-bottom: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#adminSec {
+  display: none;
+}
+
+#add {
+  display: none;
 }
 
 
