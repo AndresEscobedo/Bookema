@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
-import { getDatabase } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut  } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js";
+import { getDatabase, set, ref, onValue } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js";
 import {
   getFirestore,
   collection,
@@ -11,7 +11,7 @@ import {
   deleteDoc,
   doc,
   updateDoc
-} from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
+} from "https://www.gstatic.com/firebasejs/9.5.0/firebase-firestore.js";
 
 
 const firebaseConfig = {
@@ -30,56 +30,138 @@ const auth = getAuth();
 const db = getFirestore(app);
 
 
-window.onload = function logedIn() {
-    onAuthStateChanged(auth, (user) => {
-        if (user) {
-          // User is signed in, see docs for a list of available properties
-          // https://firebase.google.com/docs/reference/js/firebase.User
-          const uid = user.uid;
-          console.log("User Logeado")
-          // ...
-        } else {
-          // User is signed out
-          // ...
 
-          window.open("../pages/signin.html","_self")
+var uids
+
+const randGenere2 = document.querySelector("#randGenere")
+
+const gustos = document.querySelector("#gustos")
+
+
+
+window.onload = function logedIn() {
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // User is signed in, see docs for a list of available properties
+      // https://firebase.google.com/docs/reference/js/firebase.User
+      const uid = user.uid;
+
+
+
+      const starCountRef = ref(database, 'users/' + uid);
+      onValue(starCountRef, (snapshot) => {
+        const data = snapshot.val();
+
+        console.log(data)
+
+        var genere = data.generos.split(",")
+
+      
+
+        console.log(genere)
+
+        for(var i = 0; i < 2; i++){
+          var antiguita = Math.floor(Math.random() * genere.length)
+
+        console.log(antiguita)
+
+        var randGenere = genere[antiguita]
+
+        console.log(randGenere)
+
+        if(randGenere == ""){
+          location.reload();
         }
+
+
+        randGenere2.innerHTML = `
+
+             <h3> Porque te gusta el: <b>${randGenere}</b> </h3>
+             
+             `
+
+        
+        const GetBooks = (callback) => onSnapshot(collection(db, randGenere), callback);
+
+        GetBooks((querySnapshot) => {
+         
+          querySnapshot.forEach((doc) => {
+            console.log(doc.data());
+
+            const book = doc.data();
+            book.id = doc.id;
+
+            gustos.innerHTML += `
+            
+            <div class="col-md-3">
+            <div class="card card-body mt-3 border-primary cardLibro">
+              <img class="text-center img-fluid bookImg" src="${book.imagen}" />
+              <div class="text-center">
+                <h4 class="p-3" id="titleBook">
+                  ${book.titulo}
+                </h4>
+                <p>${book.autor}</p>
+        
+              </div>
+            </div>
+          </div>
+
+                        `;
+          });
+        });
+        }
+
+
+
+        
+
+      
+
+        
+
+
+
       });
-    
+
+
+      
+      
+
+
+
+
+
+
+      console.log(uids)
+      console.log("User Logeado")
+      console.log(genere)
+
+
+      // ...
+    } else {
+      // User is signed out
+      // ...
+
+      window.open("../pages/signin.html", "_self")
+    }
+  });
+
 }
+
+
+
+
 
 const logout = document.getElementById("logout");
 
 logout.onclick = function signOutFunc() {
-    signOut(auth).then(() => {
+  signOut(auth).then(() => {
 
-    }).catch((error) =>{
+  }).catch((error) => {
 
-    })
+  })
 }
 const displayTop = document.getElementById("display");
 
-const getTasks = () => getDocs(collection(db, "retos"));
-const onGetTasks = (callback) => onSnapshot(collection(db, "retos"), callback);
 
-window.addEventListener("DOMContentLoaded", async (e) => {
-  onGetTasks((querySnapshot) => {
-    diplayChallenge.innerHTML = " ";
-    querySnapshot.forEach((doc) => {
-      console.log(doc.data());
-
-      const challenge = doc.data();
-      challenge.id = doc.id;
-
-      diplayChallenge.innerHTML += `<div class="card card-body mt-2 
-            border-primary">
-            <h3 class="h5"> ${challenge.title}</h3>
-            <p> ${challenge.challenge}</p>
-            <div>
-                <button class="btn btn-primary btn-edit" > Siguiente reto </buttton>
-            </div>
-            </div>`;
-    });
-  });
-});
 

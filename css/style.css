@@ -215,6 +215,27 @@ input[type=number]:focus,
   background-color: #091548 !important;
 }
 
+#preferences-form {
+  display: none;
+}
+
+.cardLibro {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.bookImg {
+  border-radius: 20px !important;
+  width: 400px !important;
+}
+
+.mainBook {
+  height: 500px;
+  background-color: tomato;
+  border-radius: 20px;
+  margin-bottom: 100px;
+}
+
 
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -234,5 +255,11 @@ input[type=number]:focus,
     margin-left: 10px;
     width: 90%;
   }
+
+  .form {
+    background-color: #F6F4FC !important; 
+    height: 120vh;
+  }
   
 }
+
